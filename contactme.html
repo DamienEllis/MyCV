@@ -1,0 +1,135 @@
+<!--
+    Author:           Damien Ellis
+    Date completed:   2022/04/01
+    Due date:         2022/04/14
+    Task completed:   YES
+    Task description: my developer portfolio contact me page
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Set meta data details-->
+        <title>Contact Me</title>
+
+        <!--include the styling-->
+        <link rel="stylesheet" href="css/index.css">
+
+        <link rel="stylesheet" href="css/contact.css">
+
+        <!--ajax/jquery functionality-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!--Include JS functionality-->
+        <script src="JS/contactme.js"></script>
+
+    </head>
+    <body>
+        
+        <!--Spotify's play music section to the top right of the page-->
+        <div style="position:absolute; top:0; right:0;">
+
+            <!--Iframe for spotify-->
+            <div id="Spotify" style="visibility: hidden;">
+                <iframe id="spotifyControl"
+                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DWWQRwui0ExPn?utm_source=generator"
+                    width="100%" height="80" frameBorder="0" autoplay=1 allow="autoplay;">
+                </iframe>
+            </div>
+        
+            <!--button for playing spotify-->
+            <div style="margin-top: -80px;"  onclick="PlayMusic();">
+                <table id="Playmusic">
+                    <tr>
+                        <td>
+                            <img style="width:50px; height:50px;" alt="spotify logo" src="https://img.icons8.com/plasticine/100/000000/spotify--v1.png"/>
+                        </td>
+                        <td>
+                            <a id="MusicText" style="color:black;">Play Music</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="s-layout__sidebar">
+            <a class="s-sidebar__trigger" href="#0">
+            <i class="fa fa-bars"></i>
+            </a>
+  
+            <!--sidebar nav elements-->
+            <nav class="s-sidebar__nav">
+                <ul>
+                    <li>
+                        <a class="s-sidebar__nav-link sidenav" href="index.html">
+                        <i class="fa fa-home"></i><em>Home</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link sidenav" href="index.html#My_Skills">
+                        <i class="fa fa-user"></i><em>My SKills</em>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="s-sidebar__nav-link active sidenav" href="#0">
+                            <i class="fa fa-camera"></i><em>Contact me</em>
+                        </a>
+                    </li>
+                    <li>
+                        <table style="margin:30px;" width="75%">
+                            <tr>
+                                <td align="left"><a href="https://www.linkedin.com/in/damien-ellis-0225121b3/" target="_blank"><img style="width:50px; height:50px" alt="LinkedIn Logo" src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png"/></a></td>
+                                <td align="right"><a href="https://www.pol360.co.za/" target="_blank"><img style="width:50px; height:50px" alt="suitcase" src="https://img.icons8.com/external-becris-lineal-color-becris/64/000000/external-work-finance-taxation-becris-lineal-color-becris.png"/></a></td>
+                            </tr>
+                            <tr>
+                                <td align="left"><u>LinkedIn</u></td>
+                                <td align="right"><u>Business</u></td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--the table for the form-->
+        <table style="width:80%; height:100%; margin-top: 100px;">
+            <tr>
+                <td align="center">
+                    <div id="container">
+                        <h1>Keep in Touch</h1>
+                        <div class="underline"></div>
+
+                        <div class="icon_wrapper" style="padding-bottom:5%; padding-top:2%;">
+                            <img alt="myself" src="images/myImage.jpg" style="width:150px; height:130px; position:absolute; margin-left:-10%; margin-top: -5%; border-radius: 40px;"/>
+                        </div>
+
+                        <!--start of the form-->
+                        <form action="#" method="post" id="contact_form">
+                            <div class="name">
+                                <label for="name"></label>
+                                <input type="text" placeholder="My name is: Damien Ellis" name="name" id="name_input" required>
+                            </div>
+                            <div class="email">
+                                <label for="email"></label>
+                                <input type="email" placeholder="e-mail: damien@pol360.co.za" name="email" id="email_input" required>
+                            </div>
+                            <div class="telephone">
+                                <label for="name"></label>
+                                <input type="text" placeholder="My number is: +27 60 787 6384" name="telephone" id="telephone_input" required>
+                            </div>
+                            <div class="message">
+                                <label for="message"></label>
+                                <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+                            </div>
+                            
+                            <!--submit button for the form-->
+                            <div class="submit">
+                                <input type="submit" value="Contact Me" id="form_button" />
+                            </div>
+                        </form><!-- // End form -->
+                    </div><!-- // End #container -->
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
